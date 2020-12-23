@@ -20,3 +20,10 @@ Flask_WTF == 0.14.3
 
 # flask_blog/blog/forms.py: 3
 WTForms == 2.3.3
+
+
+
+# Manual from here on
+
+# WTForms alone doesn't install the validator module
+email-validator
