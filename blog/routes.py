@@ -1,8 +1,9 @@
-from flask import render_template, url_for, flash, redirect, request
+from flask import render_template, url_for, flash, redirect, request, send_from_directory-
 from blog.forms import RegistrationForm, LoginForm
 from blog.models import User, Post
 from blog import app, bcrypt, db
 from flask_login import login_user, current_user, logout_user, login_required
+import os
 
 
 postsdic = [
@@ -25,6 +26,12 @@ postsdic = [
 @app.route("/home")
 def home():
     return render_template("home.html", posts=postsdic)
+
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 @app.route("/about")
