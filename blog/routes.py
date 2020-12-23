@@ -1,4 +1,3 @@
-from flask import render_template, url_for, flash, redirect, request, send_from_directory-
 from blog.forms import RegistrationForm, LoginForm
 from blog.models import User, Post
 from blog import app, bcrypt, db
