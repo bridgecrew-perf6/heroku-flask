@@ -28,3 +28,4 @@ WTForms == 2.3.3
 # WTForms alone doesn't install the validator module
 email-validator==1.1.2
 gunicorn==20.0.4
+Flask-Compress==1.8.0
